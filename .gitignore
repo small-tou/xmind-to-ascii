@@ -1,0 +1,10 @@
+*.swp
+*.class
+.tags
+.DS_Store
+*.jar
+*.war
+*.ear
+*.pyc
+
+node_modules
