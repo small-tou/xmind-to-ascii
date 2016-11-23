@@ -1,8 +1,14 @@
-把xmind或者json结构转成ascii格式。
+transelate xmind to ascii structure
 ============
+Please note that this program can not be used in commercial or private software or programs, only for personal or open source projects.
+
 请注意，此程序不可用于商业或者私人软件或程序中，只做个人或者开源项目使用。
 
-使用（见example文件夹）
+このプログラムは、商用またはプライベートまたはソフトウェアプログラム、または個人のみのオープンソースプロジェクトでは使用できませんのでご了承ください。
+
+이 프로그램이 상업적 또는 개인 또는 소프트웨어 프로그램, 또는 개별 오픈 소스 프로젝트를 사용할 수 없습니다 있습니다.
+
+usage（in example folder）
 ============
 ```
 var AsciiMind = require('xmind-to-ascii');
