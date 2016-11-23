@@ -1,4 +1,4 @@
-transelate xmind to ascii structure
+translate xmind to ascii structure
 ============
 Please note that this program can not be used in commercial or private software or programs, only for personal or open source projects.
 

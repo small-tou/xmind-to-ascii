@@ -1,7 +1,7 @@
 {
   "name": "xmind-to-ascii",
   "version": "1.0.0",
-  "description": "transelate xmind to ascii structure",
+  "description": "translate xmind to ascii structure",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
