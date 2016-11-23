@@ -2,6 +2,22 @@
 ============
 请注意，此程序不可用于商业或者私人软件或程序中，只做个人或者开源项目使用。
 
+使用（见example文件夹）
+============
+```
+var AsciiMind = require('xmind-to-ascii');
+
+var bg = new AsciiMind({
+    w:300,
+    h:300,
+    defaultDot:''
+});
+
+bg.drawByMindFile('./前端开发者入门指南.xmind','芋头');
+
+console.log(bg.output());
+
+```
 
 处理后结果如下：
 
