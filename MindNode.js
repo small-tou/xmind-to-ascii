@@ -6,12 +6,13 @@ const BLANK = '\u3000';
 
 function byteLength(str) {
     // returns the byte length of an utf8 string
-    var s = str.length;
+    var s = 0;
     for(var i = str.length - 1; i >= 0; i--) {
         var code = str.charCodeAt(i);
-        if(code > 0x7f && code <= 0x7ff) s++;
-        else if(code > 0x7ff && code <= 0xffff) s++;
-        if(code >= 0xDC00 && code <= 0xDFFF) i--; //trail surrogate
+        if(code > 0x7f && code <= 0x7ff) s += 1;
+        else if(code > 0x7ff && code <= 0xffff) s += 1;
+        else s = s + 9.7 / 17;
+        // if(code >= 0xDC00 && code <= 0xDFFF) i--; //trail surrogate
     }
     return s;
 }
@@ -29,7 +30,8 @@ class MindNode {
     constructor(str) {
         this.str = str;
         var strLength = byteLength(this.str, 'utf8');
-        var mustLength = Math.ceil(strLength / 2); // 中间文字的长度
+        console.log(strLength)
+        var mustLength = Math.ceil(strLength); // 中间文字的长度
         this.map = [
             [PLUS, HENG].concat(HENG.repeat(mustLength).split('')).concat([HENG, PLUS]),
             [SHU, BLANK].concat(transStrToMustLengthArray(this.str, mustLength)).concat([BLANK, SHU]),
